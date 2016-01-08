@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: quotes
+  labels:
+    app: quotes
+    version: 1
+spec:
+  containers:
+  - name: quotes
+    image: docker:5000/quotes:1
+    ports:
+    - name: http
+      containerPort: 9090
+      hostPort: 9090

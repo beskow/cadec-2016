@@ -10,7 +10,6 @@ spec:
   type: NodePort
   selector:
     app: quotes
-    version: "1"
   ports:
     - port: 9090
       targetPort: 9090

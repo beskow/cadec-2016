@@ -10,7 +10,7 @@
 	</parent>
 
 	<artifactId>quotes</artifactId>
-	<version>2</version>
+	<version>1</version>
 	<packaging>jar</packaging>
 
 	<name>quotes</name>

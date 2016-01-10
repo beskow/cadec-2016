@@ -4,13 +4,13 @@ metadata:
   name: portal
   labels:
     app: portal
-    version: 1
+    version: "1"
     tier: frontend
 spec:
   type: NodePort
   selector:
     app: portal
-    version: 1
+    version: "1"
   ports:
     - port: 8080
       targetPort: 8080

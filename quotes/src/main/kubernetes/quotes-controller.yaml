@@ -4,7 +4,7 @@ metadata:
   name: quotes
   labels:
     app: quotes
-    version: 1
+    version: "1"
     tier: backend
 spec:
   replicas: 2
@@ -14,7 +14,7 @@ spec:
     metadata:
       labels:
         app: quotes
-        version: 1
+        version: "1"
         tier: backend
     spec:
       containers:

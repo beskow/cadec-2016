@@ -4,18 +4,18 @@ metadata:
   name: portal
   labels:
     app: portal
-    version: 1
+    version: "1"
     tier: frontend
 spec:
   replicas: 2
   selector:
     app: portal
-    version: 1
+    version: "1"
   template:
     metadata:
       labels:
         app: portal
-        version: 1
+        version: "1"
         tier: frontend
     spec:
       containers:

@@ -4,7 +4,7 @@ metadata:
   name: quotes
   labels:
     app: quotes
-    version: "2"
+    version: "1"
     tier: backend
 spec:
   replicas: 2
@@ -14,16 +14,15 @@ spec:
     metadata:
       labels:
         app: quotes
-        version: "2"
+        version: "1"
         tier: backend
     spec:
       containers:
       - name: quotes
-        image: docker:5000/quotes:2
+        image: docker:5000/quotes:1
         ports:
         - name: http
           containerPort: 9090
-          hostPort: 9090
         env:
         - name: GET_HOSTS_FROM
           value: dns

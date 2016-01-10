@@ -4,7 +4,7 @@ metadata:
   name: quotes
   labels:
     app: quotes
-    version: "1"
+    version: "2"
 spec:
   containers:
   - name: quotes

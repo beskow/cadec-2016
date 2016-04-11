@@ -1,0 +1,19 @@
+[Unit]
+Description=Kubernetes Controller Manager
+Documentation=https://github.com/GoogleCloudPlatform/kubernetes
+
+[Service]
+EnvironmentFile=/etc/environment
+ExecStart=/opt/bin/kube-controller-manager \
+ --root-ca-file=/srv/kubernetes/ca.crt \
+ --service-account-private-key-file=/srv/kubernetes/server.key \
+ --master=127.0.0.1:8080 \
+ --node-monitor-grace-period=10s \
+ --pod_eviction_timeout=10s \
+ --logtostderr=true
+
+Restart=always
+RestartSec=10
+
+[X-Fleet]
+MachineOf=kube-apiserver.service
